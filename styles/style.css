@@ -75,7 +75,7 @@ ol {
 
 .search-form {
   display: flex;
-  align-items: flex-end;
+  align-items:center;
   justify-content: space-between;
 }
 
@@ -84,12 +84,13 @@ ol {
   height: 386px;
   margin-bottom: 16px;
   position: relative;
+}
 
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__list-container {
@@ -143,6 +144,7 @@ ol {
 .content__card-link {
   text-decoration: none;
   color: #fff;
+  display: block;
 }
 
 .content__video-card-title {
@@ -180,35 +182,38 @@ ol {
   gap: 15px;
 }
 
-fieldset {
+.search-form__fieldset {
   border: 0;
+  margin-bottom: auto;
 }
 
 .search-form__label {
   display: flex;
   width: fit-content;
+  align-items: center;
 }
 
 .search-form__textfield {
   background-color: transparent;
+  border: 0;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   font-size: 18px;
   line-height: 1;
   font-family: "Fira Sans Condensed", sans-serif;
   display: block;
-  height: 24px;
+  min-height: 24px;
   box-sizing: initial;
   color: #fff;
   appearance: none;
-  width: 225px;
+  min-width: 225px;
 }
 
 .search-form__textfield:focus {
   outline: none;
 }
 
-.search-form__label:active {
+.search-form__label:has(.search-form__textfield):active {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
 }
@@ -236,6 +241,10 @@ fieldset {
 
 .search-form__textfield::placeholder {
   color: rgb(255 255 255/ 70%);
+  font-size: 18px;
+  line-height: 1;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400px;
 }
 
 .search-form__label-text {
@@ -269,7 +278,7 @@ input[type="checkbox"]:active + span::after {
 }
 
 .button {
-  height: 34px;
+  min-height: 34px;
   border: 1px solid #fff;
   background-color: transparent;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -304,7 +313,8 @@ input[type="checkbox"]:active + span::after {
 }
 
 .search-form__submit-button {
-  width: 194px;
+  min-width: 194px;
+  margin-top: auto;
 }
 
 .search-form__label,
@@ -314,11 +324,8 @@ video {
   cursor: pointer;
 }
 
-.content__card-link {
-  display: block;
-}
-
-.content__card-link_current {
+.content__card-link_current,
+.content__card-link:active {
   background-color: #545050;
 }
 
