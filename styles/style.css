@@ -17,7 +17,6 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
-  max-width: 1140px;
 }
 
 h1,
@@ -59,6 +58,7 @@ ol {
   grid-template-areas: "result content__details";
   grid-column-gap: 30px;
   align-items: end;
+  max-width: 1140px;
 }
 
 .result {
@@ -71,6 +71,7 @@ ol {
   flex-direction: column;
   gap: 26px;
   height: 100%;
+  min-height: 534px;
 }
 
 .search-form {
@@ -97,6 +98,7 @@ ol {
   max-height: 298px;
   overflow: auto;
   position: relative;
+  min-width: 403px;
 }
 
 .content__list {
