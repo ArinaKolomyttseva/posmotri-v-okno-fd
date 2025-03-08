@@ -57,12 +57,12 @@ ol {
   width: 100%;
   grid-template-areas: "result content__details";
   grid-column-gap: 30px;
-  align-items: end;
   max-width: 1140px;
 }
 
 .result {
   grid-area: result;
+  margin-top: 78px;
 }
 
 .content__details {
@@ -71,7 +71,6 @@ ol {
   flex-direction: column;
   gap: 26px;
   height: 100%;
-  min-height: 534px;
 }
 
 .search-form {
@@ -129,7 +128,8 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-top: 2px;
+  margin-bottom: 7px;
 }
 
 .title {
