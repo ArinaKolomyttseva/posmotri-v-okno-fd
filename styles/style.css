@@ -58,11 +58,12 @@ ol {
   grid-template-areas: "result content__details";
   grid-column-gap: 30px;
   max-width: 1140px;
+  align-items: end;
 }
 
 .result {
   grid-area: result;
-  margin-top: 78px;
+  padding-top: 78px;
 }
 
 .content__details {
